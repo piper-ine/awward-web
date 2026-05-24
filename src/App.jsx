@@ -1,10 +1,14 @@
-import React from 'react';
+import About from "./components/About";
+import Hero from "./components/Hero";
+import Features from "./components/Features";
 
 const App = () => {
   return (
-    <div>
-      <h1 className='text-3xl'>Welcove</h1>
-    </div>
+    <main className="relative min-h-screen w-screen overflow-x-hidden">
+      <Hero/>
+      <About/>
+      <Features/>
+    </main>
   );
 }
 
