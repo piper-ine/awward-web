@@ -1,13 +1,27 @@
 @import "tailwindcss";
 
-@import url("https://fonts.cdnfonts.com/css/general-sans");
+@theme {
+  --font-circular-web: "circular-web", sans-serif;
+  --font-general: "general", "General Sans", sans-serif;
+  --font-robert-medium: "robert-medium", sans-serif;
+  --font-robert-regular: "robert-regular", sans-serif;
+  --font-zentry: "zentry", sans-serif;
 
+  --color-blue-50: #dfdff0;
+  --color-blue-75: #dfdff2;
+  --color-blue-100: #f0f2fa;
+  --color-blue-200: #010101;
+  --color-blue-300: #4fb7dd;
+  --color-violet-300: #5724ff;
+  --color-yellow-100: #8e983f;
+  --color-yellow-300: #edff66;
+}
 
 body {
   width: 100dvw;
   overflow-x: hidden;
   background-color: #dfdff0;
-  font-family: "General Sans", sans-serif;
+  font-family: "general", "General Sans", sans-serif;
 }
 
 @layer base {
@@ -84,14 +98,14 @@ body {
   }
 
   .animated-word {
-    @apply special-font font-zentry font-black opacity-0;
+    @apply font-zentry font-black opacity-0;
     transform: translate3d(10px, 51px, -60px) rotateY(60deg) rotateX(-40deg);
     transform-origin: 50% 50% -150px !important;
     will-change: opacity, transform;
   }
 
   .bento-tilt_1 {
-    @apply relative border-hsla col-span-2 overflow-hidden rounded-md transition-transform duration-300 ease-out;
+    @apply relative col-span-2 overflow-hidden rounded-md border border-white/20 transition-transform duration-300 ease-out;
   }
 
   .bento-tilt_2 {
